@@ -1,0 +1,15 @@
+# Exported from Render on 2024-06-12T19:57:21Z
+services:
+- type: web
+  name: Django_Tasks_v1
+  runtime: python
+  repo: https://github.com/JaesonGuzman3/Django_Tasks_v1
+  branch: master
+  plan: free
+  envVars:
+  - key: PYTHON_VERSION
+    sync: false
+  region: oregon
+  buildCommand: pip install -r requirements.txt
+  startCommand: gunicorn djangocrudv1:wsgi
+version: "1"
